@@ -1,0 +1,9 @@
+<app-header (recipeEvent)="onAfterRecipeClicked($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     <app-recipe *ngIf="displayRecipe==='recipe'"></app-recipe>
+     <app-shopping-list *ngIf="displayRecipe!=='recipe'"></app-shopping-list>
+    </div>
+  </div>
+</div>
