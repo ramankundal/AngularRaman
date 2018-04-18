@@ -12,12 +12,7 @@ import {HeaderComponent} from './header/header.component';
 import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
-
-const appRoutes: Routes =[
-  {path:'', component:RecipeComponent},
-  {path:'recipes', component: RecipeComponent},
-  {path:'shoppingList', component:ShoppingListComponent}
-]
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,10 +25,11 @@ const appRoutes: Routes =[
     ShoppingListEditComponent,
     RecipeDetailComponent,
     DropdownDirective
+    
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
